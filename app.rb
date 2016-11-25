@@ -25,7 +25,8 @@ class Battle < Sinatra::Base
   end
 
   get '/attack_successful' do
-    $player_1.game.attack($player_2)
+    game = Game.new
+    game.attack($player_2)
     erb(:attack_successful)
     # redirect '/play'
   end

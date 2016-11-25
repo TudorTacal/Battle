@@ -19,15 +19,12 @@ class Battle < Sinatra::Base
   end
 
   get '/play' do
-      # @player_1_name = $game.player_1.name
-      # @player_2_name = $game.player_2.name
     erb(:play)
   end
 
   get '/attack_successful' do
-    $game.attack($game.player_2)
-    erb(:attack_successful)
-    # redirect '/play'
+    $game.attack($game.players.last)
+    redirect '/play'
   end
 
 run! if app_file == $0

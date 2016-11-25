@@ -13,6 +13,15 @@ class Game
     switch
   end
 
+  def lost
+    return @player_1.name if @player_1.hitpoints == 0
+    return @player_2.name if @player_2.hitpoints == 0
+  end
+
+  # def check_points
+  #   return true if
+  # end
+
   private
     def switch
       @players.rotate!

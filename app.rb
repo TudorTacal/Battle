@@ -24,6 +24,7 @@ class Battle < Sinatra::Base
 
   get '/attack_successful' do
     $game.attack($game.players.last)
+    @name = $game.lost
     redirect '/play'
   end
 

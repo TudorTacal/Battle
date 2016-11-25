@@ -1,5 +1,5 @@
-<h1> <%= $player_1.name %> VS <%= $player_2.name %> successfully created </h1>
-<h2> <%= $player_2.name %> now has <%= $player_2.hitpoints %> hitpoints</h2>
+<h1> <%= $game.player_1.name %> VS <%= $game.player_2.name %> successfully created </h1>
+<h2> <%= $game.player_2.name %> now has <%= $game.player_2.hitpoints %> hitpoints</h2>
 
 <form action="/attack_successful" method="get">
     <input type="submit" value="Attack!">

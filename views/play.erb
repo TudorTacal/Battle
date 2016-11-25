@@ -6,3 +6,7 @@
 <form action="/attack_successful" method="get">
     <input type="submit" value="Attack!">
 </form>
+
+<% if $game.player_2.hitpoints == 0 %>
+  <h2> <%= $game.player_2.name %> - you lost the game! </h2>
+<% end %>
